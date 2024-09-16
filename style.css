@@ -1,0 +1,416 @@
+body {
+    background-color: #0f1424; /* Dark background */
+    font-family: 'Arial', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+
+  .dashboard {
+    display: flex;
+    background-color:hsl(234, 43%, 9%);
+    border-radius: 50px;
+    padding: 150px;
+  }
+  
+  .profile-card {
+    background-color:hsl(235, 46%, 20%);
+    border-radius: 15px;
+    padding: 0px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+    color: white;
+    width: 180px;
+    gap: 5px;
+  }
+
+  .inner-container {
+    display: flex;
+    height: calc(100% - 10px);
+    width: calc(100% - 30px);/* Makes this container 30px shorter than the profile card */
+    background-color:#5746ea; /* Optional background color for differentiation */
+    padding: 13px;
+    margin: 0 auto; /* Centers the inner container */
+    border-radius: 8px; /* Optional rounded corners */
+
+  }
+  
+
+
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px 30px;
+    text-align: left;
+    align-items: left;
+  }
+  
+  .profile-info {
+    text-align: left;
+    padding-right: 70px;
+  }
+  .profile-picture {
+    width: 60px; /* Adjust the width as needed */
+    height: auto; /* Keeps the aspect ratio intact */
+    border-radius: 50%; /* Makes the image circular */
+    display: block; /* Ensures it is treated as a block-level element */
+    margin: 10px auto; /* Centers the image horizontally */
+    align-items: left;
+  }
+  
+
+  .grid-item-wrapper {
+    position: relative; /* Establish a relative positioning context */
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 170px; /* Adjust this height as needed */
+    background-color: transparent;
+    padding-top: 15px; /* To add spacing for the grid item to overlap */
+    text-align: left;
+    min-width: 170px;
+  }
+  
+  /* Colors for each grid item wrapper */
+  .grid-item-wrapper.work {
+    background-color: hsl(15, 100%, 70%); /* Light red */
+  }
+  
+  .grid-item-wrapper.play {
+    background-color: hsl(195, 74%, 62%); /* Soft blue */
+  }
+  
+  .grid-item-wrapper.study {
+    background-color: hsl(348, 100%, 68%); /* Light red */
+  }
+  
+  .grid-item-wrapper.exercise {
+    background-color: hsl(145, 58%, 55%); /* Lime green */
+  }
+  
+  .grid-item-wrapper.social {
+    background-color: hsl(264, 64%, 52%); /* Violet */
+  }
+  
+  .grid-item-wrapper.self-care {
+    background-color: hsl(43, 84%, 65%); /* Soft orange */
+    text-align: left;
+  }
+  
+  .imgs {
+    position: absolute; /* Allows precise positioning of the image */
+    top: 0px; /* Distance from the top */
+    right: 10px; /* Distance from the right */
+    width: 40px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+  .grid-item {
+    background-color: hsl(235, 46%, 20%); /* Blue for all grid items */
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    width: calc(100% - 10px); /* 10px less to create padding effect */
+    height: calc(100% - 58px); /* 15px less for overlap and additional 10px padding */
+    position: relative;
+    bottom: -10px; /* Moves the grid-item up to create the overlap */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+  }
+  
+  h3 {
+    display: flex;
+    align-items: left;
+    font-weight: 200;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  span {
+    display: flex;
+
+  }
+  .grid-item p {
+    margin: 5px 0;
+    text-align: left;
+    display: flex;
+    align-items: start;
+  }
+  
+  .grid-item .hours {
+    font-size: 2.5em;
+    margin: 0px 0;
+    text-align: left;
+    display: flex;
+    align-items: start;
+    font-weight: 50;
+  }
+  
+  .grid-item .previous {
+    color: #aaa;
+    text-align: left;
+    display: flex;
+    align-items: start;
+   
+  }
+
+  .previous {
+    font-size: 12px; /* Reduce font size */
+    color: #fff; /* Optional: Adjust the color if needed */
+    margin: 0; /* Remove any default margins that might add space */
+}
+
+  
+
+  .prev {
+    color: #aaa;
+  }
+  .timeframes {
+    display: flex; /* Use flexbox for flexible alignment */
+    flex-direction: column; /* Arrange items vertically */
+    align-items: flex-start; /* Align items to the left */
+    gap: 3px; /* Reduce space between items */
+   padding-left: 20px; /* Remove extra padding */
+    margin: 0; /* Remove extra margin */
+    line-height: 1;
+}
+
+
+
+
+@media(max-width: 375px) {
+    .dashboard {
+      display: flex;
+      flex-direction: column; /* Stack elements vertically */
+    }
+  
+    .profile-info {
+
+        display: flex;
+        align-items: center;/* Aligns items vertically in the center */
+      }
+
+      .text-info {
+        display: flex;
+        flex-direction: column; /* Stack "Report for" and "Jeremy Robson" vertically */
+        justify-content: center; /* Vertically center the text relative to the image */
+    }
+
+      .rep {
+        font-size: 12px; /* Makes the "Report for" text smaller */
+        margin: 0; /* Removes default margin */
+        padding: 0; /* Removes default padding */
+      }
+
+      .profile-info > div {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column; /* Stacks "Report for" above "Jeremy Robson" */
+      }
+      .profile-info h2 br {
+        display: none; /* Hides the <br> tag on smaller screens */
+      }
+      .profile-picture {
+   
+        height: auto;
+        border-radius: 50%; /* Make image circular */
+        margin-right: 10px; /* Adds a small gap between the image and the text */
+      }
+
+    .profile-card {
+      display: flex;
+      width: 300px;
+      height: 30px;
+      padding-bottom: 150px; 
+      margin-bottom: 20px;/* Add margin below the profile card */
+      order: -1; /* Moves the profile card to appear first */
+      gap: 5px;
+    }
+
+   .previous {
+    display: flex;
+    text-align: right;
+    align-items: flex-end;
+   }
+   .inner-container {
+    display: flex;
+    align-items: center; 
+    height: 100px;/* Align image and text vertically in the center */
+}
+  
+    .profile-info p,
+    .profile-info h2 {
+        display: flex;
+        text-align: right;
+      margin: 0; /* Removes any default margin between the text elements */
+      padding: 0; /* Removes any default padding */
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr; /* Single-column layout for grid items */
+      gap: 20px; /* Add gap between grid items */
+      width: 300px; /* Maintain grid container width */
+      height: 20px;
+    }
+  
+    .grid-item h3 {
+      font-size: 1em; /* Adjust font size */
+    }
+  
+    .grid-item .hours { 
+        font-size: 1.7em;
+    }
+    .grid-item {
+        font-size: 0.9em; /* Adjust font size for smaller screens */
+        display: flex; /* Make the container a flexbox */
+        justify-content: space-between; /* Ensures the elements spread across the container */
+       
+    }
+
+    .grid-item .previous {
+        font-size: 0.9em; /* Adjust font size for smaller screens */
+        text-align: right;
+        justify-content: flex-end; /* Aligns content to the right horizontally */
+        display: flex;
+    }
+    
+
+    .timeframes {
+        display: flex; /* Use flexbox for flexible alignment */
+        flex-direction: row; /* Arrange items vertically */
+        gap: 60px; /* Reduce space between items */
+        line-height: 1;
+    }
+      
+    .name {
+        white-space: nowrap; /* Prevents the line break */
+    }
+
+    @media(max-width: 414px) {
+        .dashboard {
+          display: flex;
+          flex-direction: column; /* Stack elements vertically */
+        }
+      
+        .profile-info {
+    
+            display: flex;
+            align-items: center;/* Aligns items vertically in the center */
+          }
+    
+          .text-info {
+            display: flex;
+            flex-direction: column; /* Stack "Report for" and "Jeremy Robson" vertically */
+            justify-content: center; /* Vertically center the text relative to the image */
+        }
+    
+          .rep {
+            font-size: 12px; /* Makes the "Report for" text smaller */
+            margin: 0; /* Removes default margin */
+            padding: 0; /* Removes default padding */
+          }
+    
+          .profile-info > div {
+            align-items: flex-start;
+            display: flex;
+            flex-direction: column; /* Stacks "Report for" above "Jeremy Robson" */
+          }
+          .profile-info h2 br {
+            display: none; /* Hides the <br> tag on smaller screens */
+          }
+          .profile-picture {
+       
+            height: auto;
+            border-radius: 50%; /* Make image circular */
+            margin-right: 10px; /* Adds a small gap between the image and the text */
+          }
+    
+        .profile-card {
+          display: flex;
+          width: 300px;
+          height: 30px;
+          padding-bottom: 150px; 
+          margin-bottom: 20px;/* Add margin below the profile card */
+          order: -1; /* Moves the profile card to appear first */
+          gap: 5px;
+        }
+    
+       .previous {
+        display: flex;
+        text-align: right;
+        align-items: flex-end;
+       }
+       .inner-container {
+        display: flex;
+        align-items: center; 
+        height: 100px;/* Align image and text vertically in the center */
+    }
+      
+        .profile-info p,
+        .profile-info h2 {
+            display: flex;
+            text-align: right;
+          margin: 0; /* Removes any default margin between the text elements */
+          padding: 0; /* Removes any default padding */
+        }
+    
+        .grid-container {
+          display: grid;
+          grid-template-columns: 1fr; /* Single-column layout for grid items */
+          gap: 20px; /* Add gap between grid items */
+          width: 300px; /* Maintain grid container width */
+          height: 20px;
+        }
+      
+        .grid-item h3 {
+          font-size: 1em; /* Adjust font size */
+        }
+      
+        .grid-item .hours { 
+            font-size: 1.7em;
+        }
+        .grid-item {
+            font-size: 0.9em; /* Adjust font size for smaller screens */
+            display: flex; /* Make the container a flexbox */
+            justify-content: space-between; /* Ensures the elements spread across the container */
+           
+        }
+    
+        .grid-item .previous {
+            font-size: 0.9em; /* Adjust font size for smaller screens */
+            text-align: right;
+            justify-content: flex-end; /* Aligns content to the right horizontally */
+            display: flex;
+        }
+        
+    
+        .timeframes {
+            display: flex; /* Use flexbox for flexible alignment */
+            flex-direction: row; /* Arrange items vertically */
+            gap: 60px; /* Reduce space between items */
+            line-height: 1;
+        }
+          
+        .name {
+            white-space: nowrap; /* Prevents the line break */
+        }
+    
+    
+      }
+
+  }
